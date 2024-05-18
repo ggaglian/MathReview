@@ -10,30 +10,26 @@
             margin-left: 2em;
             width: 600px;
         }
-		
-		body {
-			font-family: Verdana;
-			
-		}
-		
-		h2 { 
-			color: CadetBlue;
-		}
-		
-		h3 {
-			color: Brown;
-		    text-decoration: italic;
-		
-		}
-		
-		h4 {
-		 color: DarkGreen;
-		 text-decoration: underline;
-		
-		}
-		
-		b {color:navy}
-		
+        
+        body {
+            font-family: Verdana;
+        }
+        
+        h2 { 
+            color: CadetBlue;
+        }
+        
+        h3 {
+            color: Brown;
+            font-style: italic;
+        }
+        
+        h4 {
+            color: DarkGreen;
+            text-decoration: underline;
+        }
+        
+        b {color: navy}
     </style>
 </head>
 <body>
@@ -44,6 +40,7 @@
     <div class="math">
         \( \tan^{-1} \left( \tan \left( \frac{5\pi}{2} \right) \right) \)
     </div>
+
     <h4>Solution A:</h4>
     <p><b>Step 1:</b> The tangent function, \( \tan(x) \), is periodic with a period of \( \pi \). Therefore:</p>
     <div class="math">
@@ -78,6 +75,7 @@
 
     <h3>Problem 2</h3>
     <p>A funicular carries passengers up an embankment to an observation point. If the length of the track is 54.7 meters and the angle of inclination is \( 42^\circ \), determine the height of the embankment.</p>
+
     <h4>Solution A:</h4>
     <p><b>Step 1:</b> Identify the trigonometric relationship. We use the sine function because we have the hypotenuse (length of the track) and need to find the opposite side (height of the embankment):</p>
     <div class="math">
@@ -123,6 +121,7 @@
     <div class="math">
         \[ \csc \left( \frac{9\pi}{2} \right) \]
     </div>
+
     <h4>Solution A:</h4>
     <p><b>Step 1:</b> The cosecant function is the reciprocal of the sine function. Therefore, we need to find the sine of the angle first:</p>
     <div class="math">
@@ -170,5 +169,45 @@
     <div class="math">
         \[ \csc \left( \frac{9\pi}{2} \right) = 1 \]
     </div>
+
+    <h3>Problem 4</h3>
+    <p>With \( y = 3 \sin(4x - \pi) \):</p>
+    <p>Find the amplitude, phase shift, graph the function, find start and end points, intercepts, high and low points.</p>
+
+    <h4>Solution:</h4>
+    <p><b>Step 1:</b> Identify the amplitude and phase shift. The amplitude is the coefficient of the sine function, and the phase shift is determined by the horizontal shift inside the function:</p>
+    <div class="math">
+        \[ y = 3 \sin(4x - \pi) \]
+    </div>
+    <p>Amplitude: 3</p>
+    <p>Phase shift: \(\frac{\pi}{4}\) to the right</p>
+
+    <p><b>Step 2:</b> Find the start and end points of one period. The period of the function \( \sin(bx) \) is given by \( \frac{2\pi}{b} \):</p>
+    <div class="math">
+        \[ \text{Period} = \frac{2\pi}{4} = \frac{\pi}{2} \]
+    </div>
+    <p>Start point: \( x = \frac{\pi}{4} \)</p>
+    <p>End point: \( x = \frac{\pi}{4} + \frac{\pi}{2} = \frac{3\pi}{4} \)</p>
+
+    <p><b>Step 3:</b> Determine the intercepts, high and low points. The sine function oscillates between -1 and 1. Multiplying by 3 scales this to -3 and 3:</p>
+    <p>Intercepts occur when the sine function is 0:</p>
+    <div class="math">
+        \[ 4x - \pi = 0, \pi, 2\pi, \ldots \]
+    </div>
+    <p>Solving for \( x \):</p>
+    <div class="math">
+        \[ x = \frac{\pi}{4}, \frac{3\pi}{4}, \frac{5\pi}{4}, \ldots \]
+    </div>
+    <p>High points occur when the sine function is 1:</p>
+    <div class="math">
+        \[ y = 3 \]
+    </div>
+    <p>Low points occur when the sine function is -1:</p>
+    <div class="math">
+        \[ y = -3 \]
+    </div>
+
+    <p><b>Graph:</b></p>
+    <p>A graph of \( y = 3 \sin(4x - \pi) \) would show a sine wave with amplitude 3, phase shift \(\frac{\pi}{4}\) to the right, period \(\frac{\pi}{2}\), intercepts at \( x = \frac{\pi}{4}, \frac{3\pi}{4}, \frac{5\pi}{4}, \ldots \), high points at \( y = 3 \) and low points at \( y = -3 \).</p>
 </body>
 </html>
