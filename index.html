@@ -4,25 +4,47 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-         .math {
+        .math {
             font-size: 12pt;
             text-align: left;
+            margin-left: 2em;
             width: 600px;
-            margin-left: 3em; /* Adjust the indentation here */
         }
-        .body {
-            margin-left: 1em; /* Adjust the indentation here */
-        }
+		
+		body {
+			font-family: Verdana;
+			
+		}
+		
+		h2 { 
+			color: CadetBlue;
+		}
+		
+		h3 {
+			color: Brown;
+		    text-decoration: italic;
+		
+		}
+		
+		h4 {
+		 color: DarkGreen;
+		 text-decoration: underline;
+		
+		}
+		
+		b {color:navy}
+		
     </style>
 </head>
 <body>
-    <h2>Advanced Math Final Review Part 1</h2>
+    <h2>Solution to Math Problems</h2>
 
     <h3>Problem 1</h3>
     <p>Find the exact value, if any, of the following composite function:</p>
     <div class="math">
         \( \tan^{-1} \left( \tan \left( \frac{5\pi}{2} \right) \right) \)
     </div>
+    <h4>Solution A:</h4>
     <p><b>Step 1:</b> The tangent function, \( \tan(x) \), is periodic with a period of \( \pi \). Therefore:</p>
     <div class="math">
         \[ \tan \left( x + n\pi \right) = \tan(x) \]
@@ -40,8 +62,23 @@
         \[ \tan^{-1} \left( \tan \left( \frac{5\pi}{2} \right) \right) \text{ is not defined} \]
     </div>
 
+    <h4>Solution B:</h4>
+    <p><b>Step 1:</b> Consider the periodic nature of the tangent function and the range of the inverse tangent function. The range of \( \tan^{-1}(x) \) is \( \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \). We need to bring \( \frac{5\pi}{2} \) within the range:</p>
+    <div class="math">
+        \[ \frac{5\pi}{2} - 2\pi = \frac{\pi}{2} \]
+    </div>
+    <p><b>Step 2:</b> Since \( \frac{\pi}{2} \) is within the range of \( \tan^{-1}(x) \), we consider:</p>
+    <div class="math">
+        \[ \tan \left( \frac{\pi}{2} \right) \]
+    </div>
+    <p>But \( \tan \left( \frac{\pi}{2} \right) \) is undefined, thus the original expression is not defined:</p>
+    <div class="math">
+        \[ \tan^{-1} \left( \tan \left( \frac{5\pi}{2} \right) \right) \text{ is not defined} \]
+    </div>
+
     <h3>Problem 2</h3>
     <p>A funicular carries passengers up an embankment to an observation point. If the length of the track is 54.7 meters and the angle of inclination is \( 42^\circ \), determine the height of the embankment.</p>
+    <h4>Solution A:</h4>
     <p><b>Step 1:</b> Identify the trigonometric relationship. We use the sine function because we have the hypotenuse (length of the track) and need to find the opposite side (height of the embankment):</p>
     <div class="math">
         \[ \sin(\theta) = \frac{\text{opposite}}{\text{hypotenuse}} \]
@@ -59,11 +96,34 @@
         \[ h = 54.7 \times 0.6691 \approx 36.6 \text{ meters} \]
     </div>
 
+    <h4>Solution B:</h4>
+    <p><b>Step 1:</b> Identify the trigonometric relationship. This time, we use the cosine function to find the adjacent side first and then the Pythagorean theorem to find the height.</p>
+    <div class="math">
+        \[ \cos(\theta) = \frac{\text{adjacent}}{\text{hypotenuse}} \]
+    </div>
+    <p><b>Step 2:</b> Plug in the known values:</p>
+    <div class="math">
+        \[ \cos(42^\circ) = \frac{a}{54.7} \]
+    </div>
+    <p><b>Step 3:</b> Solve for \( a \):</p>
+    <div class="math">
+        \[ a = 54.7 \times \cos(42^\circ) \]
+    </div>
+    <p>Using a calculator to find \( \cos(42^\circ) \approx 0.7431 \), we get:</p>
+    <div class="math">
+        \[ a = 54.7 \times 0.7431 \approx 40.6 \text{ meters} \]
+    </div>
+    <p><b>Step 4:</b> Use the Pythagorean theorem to find \( h \):</p>
+    <div class="math">
+        \[ h = \sqrt{54.7^2 - 40.6^2} \approx 36.6 \text{ meters} \]
+    </div>
+
     <h3>Problem 3</h3>
     <p>Find the exact value. Do not use a calculator:</p>
     <div class="math">
         \[ \csc \left( \frac{9\pi}{2} \right) \]
     </div>
+    <h4>Solution A:</h4>
     <p><b>Step 1:</b> The cosecant function is the reciprocal of the sine function. Therefore, we need to find the sine of the angle first:</p>
     <div class="math">
         \[ \sin \left( \frac{9\pi}{2} \right) \]
@@ -79,6 +139,32 @@
     <p><b>Step 4:</b> The cosecant is the reciprocal of the sine:</p>
     <div class="math">
         \[ \csc \left( \frac{\pi}{2} \right) = \frac{1}{\sin \left( \frac{\pi}{2} \right)} = \frac{1}{1} = 1 \]
+    </div>
+    <p>Therefore, the exact value is:</p>
+    <div class="math">
+        \[ \csc \left( \frac{9\pi}{2} \right) = 1 \]
+    </div>
+
+    <h4>Solution B:</h4>
+    <p><b>Step 1:</b> Use the co-function identity for sine and cosecant. We know that:</p>
+    <div class="math">
+        \[ \csc(x) = \frac{1}{\sin(x)} \]
+    </div>
+    <p>Using the periodic property of sine:</p>
+    <div class="math">
+        \[ \sin(x + 2k\pi) = \sin(x) \]
+    </div>
+    <p><b>Step 2:</b> Simplify the angle using the periodicity of sine:</p>
+    <div class="math">
+        \[ \frac{9\pi}{2} - 4\pi = \frac{9\pi}{2} - \frac{8\pi}{2} = \frac{\pi}{2} \]
+    </div>
+    <p><b>Step 3:</b> We find the sine of the simplified angle:</p>
+    <div class="math">
+        \[ \sin \left( \frac{\pi}{2} \right) = 1 \]
+    </div>
+    <p><b>Step 4:</b> Thus, the cosecant is:</p>
+    <div class="math">
+        \[ \csc \left( \frac{\pi}{2} \right) = 1 \]
     </div>
     <p>Therefore, the exact value is:</p>
     <div class="math">
