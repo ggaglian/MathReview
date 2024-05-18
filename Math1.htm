@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .math {
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <h2>Advanced Math Final Review Part 1</h2>
+
+    <h3>Problem 1</h3>
+    <p>Find the exact value, if any, of the following composite function:</p>
+    <div class="math">
+        \( \tan^{-1} \left( \tan \left( \frac{5\pi}{2} \right) \right) \)
+    </div>
+    <p><b>Step 1:</b> The tangent function, \( \tan(x) \), is periodic with a period of \( \pi \). Therefore:</p>
+    <div class="math">
+        \[ \tan \left( x + n\pi \right) = \tan(x) \]
+    </div>
+    <p><b>Step 2:</b> The given angle \( \frac{5\pi}{2} \) is outside the principal range of the inverse tangent function, which is \( \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \). We need to find an equivalent angle within this range. We can subtract \( 2\pi \) to get an equivalent angle:</p>
+    <div class="math">
+        \[ \frac{5\pi}{2} - 2\pi = \frac{5\pi}{2} - \frac{4\pi}{2} = \frac{\pi}{2} \]
+    </div>
+    <p><b>Step 3:</b> Now, we find:</p>
+    <div class="math">
+        \[ \tan \left( \frac{\pi}{2} \right) \]
+    </div>
+    <p>However, \( \tan \left( \frac{\pi}{2} \right) \) is undefined, so:</p>
+    <div class="math">
+        \[ \tan^{-1} \left( \tan \left( \frac{5\pi}{2} \right) \right) \text{ is not defined} \]
+    </div>
+
+    <h3>Problem 2</h3>
+    <p>A funicular carries passengers up an embankment to an observation point. If the length of the track is 54.7 meters and the angle of inclination is \( 42^\circ \), determine the height of the embankment.</p>
+    <p><b>Step 1:</b> Identify the trigonometric relationship. We use the sine function because we have the hypotenuse (length of the track) and need to find the opposite side (height of the embankment):</p>
+    <div class="math">
+        \[ \sin(\theta) = \frac{\text{opposite}}{\text{hypotenuse}} \]
+    </div>
+    <p><b>Step 2:</b> Plug in the known values:</p>
+    <div class="math">
+        \[ \sin(42^\circ) = \frac{h}{54.7} \]
+    </div>
+    <p><b>Step 3:</b> Solve for \( h \):</p>
+    <div class="math">
+        \[ h = 54.7 \times \sin(42^\circ) \]
+    </div>
+    <p>Using a calculator to find \( \sin(42^\circ) \approx 0.6691 \), we get:</p>
+    <div class="math">
+        \[ h = 54.7 \times 0.6691 \approx 36.6 \text{ meters} \]
+    </div>
+
+    <h3>Problem 3</h3>
+    <p>Find the exact value. Do not use a calculator:</p>
+    <div class="math">
+        \[ \csc \left( \frac{9\pi}{2} \right) \]
+    </div>
+    <p><b>Step 1:</b> The cosecant function is the reciprocal of the sine function. Therefore, we need to find the sine of the angle first:</p>
+    <div class="math">
+        \[ \sin \left( \frac{9\pi}{2} \right) \]
+    </div>
+    <p><b>Step 2:</b> The sine function is periodic with a period of \( 2\pi \). So, we can subtract \( 2\pi \) until the angle is within one period:</p>
+    <div class="math">
+        \[ \frac{9\pi}{2} - 4\pi = \frac{9\pi}{2} - \frac{8\pi}{2} = \frac{\pi}{2} \]
+    </div>
+    <p><b>Step 3:</b> Now, we find the sine of the angle:</p>
+    <div class="math">
+        \[ \sin \left( \frac{\pi}{2} \right) = 1 \]
+    </div>
+    <p><b>Step 4:</b> The cosecant is the reciprocal of the sine:</p>
+    <div class="math">
+        \[ \csc \left( \frac{\pi}{2} \right) = \frac{1}{\sin \left( \frac{\pi}{2} \right)} = \frac{1}{1} = 1 \]
+    </div>
+    <p>Therefore, the exact value is:</p>
+    <div class="math">
+        \[ \csc \left( \frac{9\pi}{2} \right) = 1 \]
+    </div>
+</body>
+</html>
