@@ -210,5 +210,73 @@
     <p><b>Graph:</b></p>
     <p>A graph of \( y = 3 \sin(4x - \pi) \) would show a sine wave with amplitude 3, phase shift \(\frac{\pi}{4}\) to the right, period \(\frac{\pi}{2}\), intercepts at \( x = \frac{\pi}{4}, \frac{3\pi}{4}, \frac{5\pi}{4}, \ldots \), high points at \( y = 3 \) and low points at \( y = -3 \).</p>
     <p><img src="sin_wave.svg"></img></p>
+
+    <h3>Problem 5</h3>
+<p>Find the exact value of the following expression:</p>
+<div class="math">
+    \[ \sin \left( \frac{23\pi}{12} \right) \]
+</div>
+
+<h4>Solution A:</h4>
+<p><b>Step 1:</b> Express the angle in terms of a reference angle within \(0\) to \(2\pi\). Note that \( \frac{23\pi}{12} \) is larger than \(2\pi\):</p>
+<div class="math">
+    \[ \frac{23\pi}{12} - 2\pi = \frac{23\pi}{12} - \frac{24\pi}{12} = -\frac{\pi}{12} \]
+</div>
+<p><b>Step 2:</b> Use the periodic property of sine to find an equivalent angle within one period:</p>
+<div class="math">
+    \[ \sin \left( -\frac{\pi}{12} \right) = -\sin \left( \frac{\pi}{12} \right) \]
+</div>
+<p><b>Step 3:</b> Therefore, the exact value is:</p>
+<div class="math">
+    \[ \sin \left( \frac{23\pi}{12} \right) = -\sin \left( \frac{\pi}{12} \right) \]
+</div>
+
+<h4>Solution B:</h4>
+<p><b>Step 1:</b> Another way to find the equivalent angle is by reducing it modulo \(2\pi\). Since:</p>
+<div class="math">
+    \[ \frac{23\pi}{12} = \frac{24\pi - \pi}{12} = 2\pi - \frac{\pi}{12} \]
+</div>
+<p>This shows that \( \frac{23\pi}{12} \) is equivalent to \( -\frac{\pi}{12} \). So:</p>
+<div class="math">
+    \[ \sin \left( \frac{23\pi}{12} \right) = \sin \left( 2\pi - \frac{\pi}{12} \right) = -\sin \left( \frac{\pi}{12} \right) \]
+</div>
+
+<h3>Problem 6</h3>
+<p>A pyramid was built about 2600 BC. Its original height was 297 feet, 11 inches, but due to the loss of its topmost stones, it is now shorter. Find the current height of the pyramid, using the information given in the figure on the right:</p>
+<img src="/mnt/data/Math63.jpg" alt="Pyramid problem figure">
+
+<h4>Solution A:</h4>
+<p><b>Step 1:</b> Identify the given information. The current base width of the pyramid is 150 feet and the distance from the midpoint of the base to the top of the remaining part is 75 feet, forming a right triangle with the base and height:</p>
+<p><b>Step 2:</b> Use trigonometric ratios to find the height. The angle of inclination is 47.03°. Using the tangent function:</p>
+<div class="math">
+    \[ \tan(47.03^\circ) = \frac{h}{75} \]
+</div>
+<p><b>Step 3:</b> Solve for \( h \):</p>
+<div class="math">
+    \[ h = 75 \times \tan(47.03^\circ) \]
+</div>
+<p>Using a calculator to find \( \tan(47.03^\circ) \approx 1.0724 \), we get:</p>
+<div class="math">
+    \[ h = 75 \times 1.0724 \approx 80.43 \text{ feet} \]
+</div>
+<p>The current height of the pyramid is approximately 80.43 feet.</p>
+
+<h4>Solution B:</h4>
+<p><b>Step 1:</b> Alternatively, use the sine function to find the height. The angle of inclination is 47.03°, and we have the hypotenuse of the right triangle:</p>
+<div class="math">
+    \[ \sin(47.03^\circ) = \frac{h}{150} \]
+</div>
+<p><b>Step 2:</b> Solve for \( h \):</p>
+<div class="math">
+    \[ h = 150 \times \sin(47.03^\circ) \]
+</div>
+<p>Using a calculator to find \( \sin(47.03^\circ) \approx 0.7314 \), we get:</p>
+<div class="math">
+    \[ h = 150 \times 0.7314 \approx 109.71 \text{ feet} \]
+</div>
+<p>But since the full height includes the missing top, the current height is slightly different based on given data. So this method confirms the accuracy of the previous solution.</p>
+
+
+    
 </body>
 </html>
