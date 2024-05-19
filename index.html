@@ -246,30 +246,31 @@
 <img src="Math63Diagram.jpg" alt="Pyramid problem figure">
 
 <h4>Solution:</h4>
-<p><b>Step 1:</b> Calculate the height of the smaller triangle using \( \angle B = 47.03^\circ \):</p>
+<p><b>Step 1:</b> Use the tangent function for both triangles to express \( H \) in terms of \( x \):</p>
 <div class="math">
-    \[ \tan(47.03^\circ) = \frac{x}{75} \]
+    \[ \tan(47.03^\circ) = \frac{H}{75 + x} \]
+    \[ H = (75 + x) \tan(47.03^\circ) \]
+    <br>
+    \[ \tan(39.5^\circ) = \frac{H}{150 + x} \]
+    \[ H = (150 + x) \tan(39.5^\circ) \]
 </div>
-<p><b>Step 2:</b> Solve for \( x \):</p>
-<div class="math">
-    \[ x = 75 \times \tan(47.03^\circ) \approx 80.43 \text{ feet} \]
-</div>
-<p><b>Step 3:</b> Calculate the height of the entire pyramid using \( \angle A = 39.5^\circ \):</p>
-<div class="math">
-    \[ \tan(39.5^\circ) = \frac{H}{150} \]
-</div>
-<p><b>Step 4:</b> Solve for \( H \):</p>
-<div class="math">
-    \[ H = 150 \times \tan(39.5^\circ) \approx 123.315 \text{ feet} \]
-</div>
-<p><b>Step 5:</b> Subtract \( x \) from the total height to find the remaining height of the pyramid:</p>
-<div class="math">
-    \[ \text{Remaining height} = H - x \]
-    \[ \text{Remaining height} = 123.315 - 80.43 \]
-    \[ \text{Remaining height} \approx 42.885 \text{ feet} \]
-</div>
-<p>The current height of the pyramid is approximately 42.89 feet.</p>
 
+<p><b>Step 2:</b> Set the two expressions for \( H \) equal to each other and solve for \( x \):</p>
+<div class="math">
+    \[ (75 + x) \tan(47.03^\circ) = (150 + x) \tan(39.5^\circ) \]
+    \[ (75 + x) \times 1.0724 = (150 + x) \times 0.8221 \]
+    <br>
+    \[ 80.43 + 1.0724x = 123.315 + 0.8221x \]
+    \[ 0.2503x = 42.885 \]
+    \[ x \approx 171.36 \]
+</div>
+
+<p><b>Step 3:</b> Substitute \( x \) back into either expression to solve for \( H \):</p>
+<div class="math">
+    \[ H = (75 + 171.36) \tan(47.03^\circ) \approx 264.25 \text{ feet} \]
+</div>
+
+<p>The current height of the pyramid is approximately 264.25 feet.</p>
     
 </body>
 </html>
