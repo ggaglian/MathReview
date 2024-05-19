@@ -243,39 +243,32 @@
 
 <h3>Problem 6</h3>
 <p>A pyramid was built about 2600 BC. Its original height was 297 feet, 11 inches, but due to the loss of its topmost stones, it is now shorter. Find the current height of the pyramid, using the information given in the figure on the right:</p>
-<img src="/mnt/data/Math63.jpg" alt="Pyramid problem figure">
+<img src="Math63Diagram.jpg" alt="Pyramid problem figure">
 
-<h4>Solution A:</h4>
-<p><b>Step 1:</b> Identify the given information. The current base width of the pyramid is 150 feet and the distance from the midpoint of the base to the top of the remaining part is 75 feet, forming a right triangle with the base and height:</p>
-<p><b>Step 2:</b> Use trigonometric ratios to find the height. The angle of inclination is 47.03°. Using the tangent function:</p>
+<h4>Solution:</h4>
+<p><b>Step 1:</b> Calculate the height of the smaller triangle using \( \angle B = 47.03^\circ \):</p>
 <div class="math">
-    \[ \tan(47.03^\circ) = \frac{h}{75} \]
+    \[ \tan(47.03^\circ) = \frac{x}{75} \]
 </div>
-<p><b>Step 3:</b> Solve for \( h \):</p>
+<p><b>Step 2:</b> Solve for \( x \):</p>
 <div class="math">
-    \[ h = 75 \times \tan(47.03^\circ) \]
+    \[ x = 75 \times \tan(47.03^\circ) \approx 80.43 \text{ feet} \]
 </div>
-<p>Using a calculator to find \( \tan(47.03^\circ) \approx 1.0724 \), we get:</p>
+<p><b>Step 3:</b> Calculate the height of the entire pyramid using \( \angle A = 39.5^\circ \):</p>
 <div class="math">
-    \[ h = 75 \times 1.0724 \approx 80.43 \text{ feet} \]
+    \[ \tan(39.5^\circ) = \frac{H}{150} \]
 </div>
-<p>The current height of the pyramid is approximately 80.43 feet.</p>
-
-<h4>Solution B:</h4>
-<p><b>Step 1:</b> Alternatively, use the sine function to find the height. The angle of inclination is 47.03°, and we have the hypotenuse of the right triangle:</p>
+<p><b>Step 4:</b> Solve for \( H \):</p>
 <div class="math">
-    \[ \sin(47.03^\circ) = \frac{h}{150} \]
+    \[ H = 150 \times \tan(39.5^\circ) \approx 123.315 \text{ feet} \]
 </div>
-<p><b>Step 2:</b> Solve for \( h \):</p>
+<p><b>Step 5:</b> Subtract \( x \) from the total height to find the remaining height of the pyramid:</p>
 <div class="math">
-    \[ h = 150 \times \sin(47.03^\circ) \]
+    \[ \text{Remaining height} = H - x \]
+    \[ \text{Remaining height} = 123.315 - 80.43 \]
+    \[ \text{Remaining height} \approx 42.885 \text{ feet} \]
 </div>
-<p>Using a calculator to find \( \sin(47.03^\circ) \approx 0.7314 \), we get:</p>
-<div class="math">
-    \[ h = 150 \times 0.7314 \approx 109.71 \text{ feet} \]
-</div>
-<p>But since the full height includes the missing top, the current height is slightly different based on given data. So this method confirms the accuracy of the previous solution.</p>
-
+<p>The current height of the pyramid is approximately 42.89 feet.</p>
 
     
 </body>
