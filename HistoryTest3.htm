@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History Test</title>
+    <script>
+        const answers = {
+            q1: 'c',
+            q2: 'd',
+            q3: 'b',
+            q4: 'a',
+            q5: 'd',
+            q6: 'b',
+            q7: 'c',
+            q8: 'a',
+            q9: 'c',
+            q10: 'd',
+            q11: 'b',
+            q12: 'c',
+            q13: 'a',
+            q14: 'b',
+            q15: 'd',
+            q16: 'c',
+            q17: 'a',
+            q18: 'd',
+            q19: 'c',
+            q20: 'b',
+            q21: 'a',
+            q22: 'c',
+            q23: 'b',
+            q24: 'd',
+            q25: 'a',
+            q26: 'd',
+            q27: 'c',
+            q28: 'b',
+            q29: 'a',
+            q30: 'd',
+            q31: 'b',
+            q32: 'c',
+            q33: 'a',
+            q34: 'd',
+            q35: 'b',
+            q36: 'a',
+            q37: 'a',
+            q38: 'a',
+            q39: 'c',
+            q40: 'b',
+            q41: 'a',
+            q42: 'a',
+            q43: 'c',
+            q44: 'a',
+            q45: 'a',
+            q46: 'c',
+            q47: 'a',
+            q48: 'a',
+            q49: 'b',
+            q50: 'c',
+            q51: 'a',
+            q52: 'a',
+            q53: 'b',
+            q54: 'd',
+            q55: 'b',
+            q56: 'a',
+            q57: 'a',
+            q58: 'a',
+            q59: 'b',
+            q60: 'b'
+        };
+
+        function gradeTest() {
+            const formElements = document.querySelectorAll('form ol li');
+            let score = 0;
+
+            formElements.forEach((li, index) => {
+                const questionNumber = index + 1;
+                const selected = li.querySelector(`input[name="q${questionNumber}"]:checked`);
+                let resultElement = li.querySelector('.result');
+                if (!resultElement) {
+                    resultElement = document.createElement('p');
+                    resultElement.className = 'result';
+                    li.appendChild(resultElement);
+                }
+
+                if (selected) {
+                    if (selected.value === answers[`q${questionNumber}`]) {
+                        resultElement.innerHTML = `Question ${questionNumber}: Correct`;
+                        score++;
+                    } else {
+                        resultElement.innerHTML = `Question ${questionNumber}: Incorrect. Correct answer is ${answers[`q${questionNumber}`].toUpperCase()}`;
+                    }
+                } else {
+                    resultElement.innerHTML = `Question ${questionNumber}: Not answered. Correct answer is ${answers[`q${questionNumber}`].toUpperCase()}`;
+                }
+            });
+
+            document.getElementById('score').innerHTML = `Your score: ${score} / 60`;
+        }
+    </script>
+</head>
+<body>
+    <h1>History Test</h1>
+    <form>
+        <ol>
+            <li>
+                <p>Who was the 16th President of the United States who saved the Union during the Civil War?</p>
+                <input type="radio" name="q1" value="a"> A) Ulysses S. Grant<br>
+                <input type="radio" name="q1" value="b"> B) Jefferson Davis<br>
+                <input type="radio" name="q1" value="c"> C) Abraham Lincoln<br>
+                <input type="radio" name="q1" value="d"> D) William McKinley<br>
+            </li>
+            <li>
+                <p>Who served as President of the Confederate States of America during its entire history from 1861 to 1865?</p>
+                <input type="radio" name="q2" value="a"> A) Robert E. Lee<br>
+                <input type="radio" name="q2" value="b"> B) Abraham Lincoln<br>
+                <input type="radio" name="q2" value="c"> C) Ulysses S. Grant<br>
+                <input type="radio" name="q2" value="d"> Jefferson Davis<br>
+            </li>
+            <li>
+                <p>Which battle marked the start of the Civil War?</p>
+                <input type="radio" name="q3" value="a"> A) Battle of Gettysburg<br>
+                <input type="radio" name="q3" value="b"> B) Fort Sumter<br>
+                <input type="radio" name="q3" value="c"> C) Battle of Shiloh<br>
+                <input type="radio" name="q3" value="d"> Battle of Antietam<br>
+            </li>
+            <li>
+                <p>Which plan was the Union war strategy that included a blockade of the southern coast?</p>
+                <input type="radio" name="q4" value="a"> A) Anaconda Plan<br>
+                <input type="radio" name="q4" value="b"> B) Gettysburg Address<br>
+                <input type="radio" name="q4" value="c"> Emancipation Proclamation<br>
+                <input type="radio" name="q4" value="d"> New Deal<br>
+            </li>
+            <li>
+                <p>Who was the Confederate general who opposed secession but did not believe the Union should be held together by force?</p>
+                <input type="radio" name="q5" value="a"> A) Ulysses S. Grant<br>
+                <input type="radio" name="q5" value="b"> B) Abraham Lincoln<br>
+                <input type="radio" name="q5" value="c"> C) Jefferson Davis<br>
+                <input type="radio" name="q5" value="d"> Robert E. Lee<br>
+            </li>
+            <li>
+                <p>Which Civil War battle was the bloodiest with 25,000 casualties?</p>
+                <input type="radio" name="q6" value="a"> A) Battle of Shiloh<br>
+                <input type="radio" name="q6" value="b"> B) Battle of Antietam<br>
+                <input type="radio" name="q6" value="c"> C) Siege of Vicksburg<br>
+                <input type="radio" name="q6" value="d"> Battle of Gettysburg<br>
+            </li>
+            <li>
+                <p>Which battle led to the Union army's blockade of Vicksburg, Mississippi, leading to the city's surrender?</p>
+                <input type="radio" name="q7" value="a"> A) Battle of Gettysburg<br>
+                <input type="radio" name="q7" value="b"> B) Battle of Shiloh<br>
+                <input type="radio" name="q7" value="c"> C) Siege of Vicksburg<br>
+                <input type="radio" name="q7" value="d"> Battle of Antietam<br>
+            </li>
+            <li>
+                <p>Who was the American general and the 18th President of the United States?</p>
+                <input type="radio" name="q8" value="a"> A) Ulysses S. Grant<br>
+                <input type="radio" name="q8" value="b"> B) Robert E. Lee<br>
+                <input type="radio" name="q8" value="c"> C) Abraham Lincoln<br>
+                <input type="radio" name="q8" value="d"> Jefferson Davis<br>
+            </li>
+            <li>
+                <p>What was the turning point battle of the Civil War that made it clear the North would win?</p>
+                <input type="radio" name="q9" value="a"> A) Battle of Shiloh<br>
+                <input type="radio" name="q9" value="b"> B) Fort Sumter<br>
+                <input type="radio" name="q9" value="c"> C) Battle of Gettysburg<br>
+                <input type="radio" name="q9" value="d"> Battle of Antietam<br>
+            </li>
+            <li>
+                <p>Who assassinated Abraham Lincoln?</p>
+                <input type="radio" name="q10" value="a"> A) Ulysses S. Grant<br>
+                <input type="radio" name="q10" value="b"> B) Robert E. Lee<br>
+                <input type="radio" name="q10" value="c"> C) Jefferson Davis<br>
+                <input type="radio" name="q10" value="d"> John Wilkes Booth<br>
+            </li>
+            <li>
+                <p>What document issued by Abraham Lincoln declared that all slaves in the Confederate states would be free?</p>
+                <input type="radio" name="q11" value="a"> A) Anaconda Plan<br>
+                <input type="radio" name="q11" value="b"> B) Emancipation Proclamation<br>
+                <input type="radio" name="q11" value="c"> C) Gettysburg Address<br>
+                <input type="radio" name="q11" value="d"> D) Reconstruction Plan<br>
+            </li>
+            <li>
+                <p>What was the 3-minute address by Abraham Lincoln during the American Civil War at the dedication of a national cemetery on the site of the Battle of Gettysburg?</p>
+                <input type="radio" name="q12" value="a"> A) Emancipation Proclamation<br>
+                <input type="radio" name="q12" value="b"> B) Anaconda Plan<br>
+                <input type="radio" name="q12" value="c"> C) Gettysburg Address<br>
+                <input type="radio" name="q12" value="d"> D) Reconstruction Plan<br>
+            </li>
+            <li>
+                <p>Who led the Union army's blockade of Vicksburg, Mississippi, that led the city to surrender during the Civil War?</p>
+                <input type="radio" name="q13" value="a"> A) Ulysses S. Grant<br>
+                <input type="radio" name="q13" value="b"> B) Abraham Lincoln<br>
+                <input type="radio" name="q13" value="c"> C) Robert E. Lee<br>
+                <input type="radio" name="q13" value="d"> D) Jefferson Davis<br>
+            </li>
+            <li>
+                <p>Which Civil War battle was one of the most bloody battles where Confederate forces surprised union troops and drove them across the Tennessee river?</p>
+                <input type="radio" name="q14" value="a"> A) Battle of Antietam<br>
+                <input type="radio" name="q14" value="b"> B) Battle of Shiloh<br>
+                <input type="radio" name="q14" value="c"> C) Battle of Gettysburg<br>
+                <input type="radio" name="q14" value="d"> D) Siege of Vicksburg<br>
+            </li>
+            <li>
+                <p>What period after the Civil War involved reorganizing and reintegrating southern states into the Union?</p>
+                <input type="radio" name="q15" value="a"> A) Industrial Revolution<br>
+                <input type="radio" name="q15" value="b"> B) Gilded Age<br>
+                <input type="radio" name="q15" value="c"> C) Progressive Era<br>
+                <input type="radio" name="q15" value="d"> D) Reconstruction<br>
+            </li>
+            <li>
+                <p>What system used on southern farms after the Civil War involved farmers working land owned by someone else in return for a small portion of the crops?</p>
+                <input type="radio" name="q16" value="a"> A) Slavery<br>
+                <input type="radio" name="q16" value="b"> B) Homesteading<br>
+                <input type="radio" name="q16" value="c"> C) Sharecropping<br>
+                <input type="radio" name="q16" value="d"> D) Tenant farming<br>
+            </li>
+            <li>
+                <p>Which secret society created by white southerners in 1866 used terror and violence to keep African Americans from obtaining their civil rights?</p>
+                <input type="radio" name="q17" value="a"> A) Ku Klux Klan<br>
+                <input type="radio" name="q17" value="b"> B) Black Codes<br>
+                <input type="radio" name="q17" value="c"> C) Jim Crow Laws<br>
+                <input type="radio" name="q17" value="d"> D) Freedmen's Bureau<br>
+            </li>
+            <li>
+                <p>What laws designed to enforce segregation of blacks from whites were enacted after the Civil War?</p>
+                <input type="radio" name="q18" value="a"> A) Black Codes<br>
+                <input type="radio" name="q18" value="b"> B) 13th Amendment<br>
+                <input type="radio" name="q18" value="c"> C) 14th Amendment<br>
+                <input type="radio" name="q18" value="d"> D) Jim Crow Laws<br>
+            </li>
+            <li>
+                <p>What amendment abolished slavery without compensation for slave owners?</p>
+                <input type="radio" name="q19" value="a"> A) 14th Amendment<br>
+                <input type="radio" name="q19" value="b"> B) 19th Amendment<br>
+                <input type="radio" name="q19" value="c"> C) 13th Amendment<br>
+                <input type="radio" name="q19" value="d"> D) 15th Amendment<br>
+            </li>
+            <li>
+                <p>What amendment declares that all persons born in the U.S. are citizens and guarantees equal protection of the laws?</p>
+                <input type="radio" name="q20" value="a"> A) 13th Amendment<br>
+                <input type="radio" name="q20" value="b"> B) 14th Amendment<br>
+                <input type="radio" name="q20" value="c"> C) 15th Amendment<br>
+                <input type="radio" name="q20" value="d"> D) 19th Amendment<br>
+            </li>
+            <li>
+                <p>What amendment prevents the U.S. from denying a person the right to vote based on race, color, or creed?</p>
+                <input type="radio" name="q21" value="a"> A) 15th Amendment<br>
+                <input type="radio" name="q21" value="b"> B) 14th Amendment<br>
+                <input type="radio" name="q21" value="c"> C) 13th Amendment<br>
+                <input type="radio" name="q21" value="d"> D) 19th Amendment<br>
+            </li>
+            <li>
+                <p>What were journalists who attempted to find corruption or wrongdoing in industries and expose it to the public called?</p>
+                <input type="radio" name="q22" value="a"> A) Yellow Journalists<br>
+                <input type="radio" name="q22" value="b"> B) Progressive Reporters<br>
+                <input type="radio" name="q22" value="c"> C) Muckrakers<br>
+                <input type="radio" name="q22" value="d"> D) Investigative Journalists<br>
+            </li>
+            <li>
+                <p>What were the goals of the Progressive Movement?</p>
+                <input type="radio" name="q23" value="a"> A) Establishing monopolies<br>
+                <input type="radio" name="q23" value="b"> B) Protecting social welfare, promoting moral improvement, creating economic reform, fostering efficiency<br>
+                <input type="radio" name="q23" value="c"> C) Reducing government intervention<br>
+                <input type="radio" name="q23" value="d"> D) Expanding American territories<br>
+            </li>
+            <li>
+                <p>What was Theodore Roosevelt's position on trusts?</p>
+                <input type="radio" name="q24" value="a"> A) All trusts are harmful<br>
+                <input type="radio" name="q24" value="b"> B) Trusts were beneficial<br>
+                <input type="radio" name="q24" value="c"> C) Trusts should be left alone<br>
+                <input type="radio" name="q24" value="d"> D) Some trusts were harmful to the public interest<br>
+            </li>
+            <li>
+                <p>What were the goals of the Populists?</p>
+                <input type="radio" name="q25" value="a"> A) Fought for better conditions for farmers and workers<br>
+                <input type="radio" name="q25" value="b"> B) Expanding American territories<br>
+                <input type="radio" name="q25" value="c"> C) Reducing taxes<br>
+                <input type="radio" name="q25" value="d"> D) Increasing tariffs<br>
+            </li>
+            <li>
+                <p>Who led the fight for Cuba's independence from Spain?</p>
+                <input type="radio" name="q26" value="a"> A) William McKinley<br>
+                <input type="radio" name="q26" value="b"> B) Theodore Roosevelt<br>
+                <input type="radio" name="q26" value="c"> C) Ulysses S. Grant<br>
+                <input type="radio" name="q26" value="d"> D) Jose Marti<br>
+            </li>
+            <li>
+                <p>What was the foreign policy created under President Taft that involved exchanging financial support for political influence in Latin America and the Caribbean?</p>
+                <input type="radio" name="q27" value="a"> A) Big Stick Diplomacy<br>
+                <input type="radio" name="q27" value="b"> B) Moral Diplomacy<br>
+                <input type="radio" name="q27" value="c"> C) Dollar Diplomacy<br>
+                <input type="radio" name="q27" value="d"> D) Roosevelt Corollary<br>
+            </li>
+            <li>
+                <p>Which book by Upton Sinclair exposed abuses in the meat packing industry and led to the passage of the Meat Inspection Act?</p>
+                <input type="radio" name="q28" value="a"> A) Silent Spring<br>
+                <input type="radio" name="q28" value="b"> B) The Jungle<br>
+                <input type="radio" name="q28" value="c"> C) The Grapes of Wrath<br>
+                <input type="radio" name="q28" value="d"> D) Uncle Tom's Cabin<br>
+            </li>
+            <li>
+                <p>Who was the 25th president responsible for the Spanish-American War and the Annexation of Hawaii?</p>
+                <input type="radio" name="q29" value="a"> A) William McKinley<br>
+                <input type="radio" name="q29" value="b"> B) Woodrow Wilson<br>
+                <input type="radio" name="q29" value="c"> C) Franklin D. Roosevelt<br>
+                <input type="radio" name="q29" value="d"> D) Theodore Roosevelt<br>
+            </li>
+            <li>
+                <p>What were the causes of the Spanish-American War?</p>
+                <input type="radio" name="q30" value="a"> A) Diplomatic tensions<br>
+                <input type="radio" name="q30" value="b"> B) Trade disputes<br>
+                <input type="radio" name="q30" value="c"> C) Expansion of U.S. territories<br>
+                <input type="radio" name="q30" value="d"> D) Yellow journalism, imperialism, Spain's brutality to the Cubans, explosion of the USS Maine<br>
+            </li>
+            <li>
+                <p>What is yellow journalism?</p>
+                <input type="radio" name="q31" value="a"> A) Journalism that accurately reports news<br>
+                <input type="radio" name="q31" value="b"> B) Journalism that exploits, distorts, or exaggerates the news to create sensations and attract readers<br>
+                <input type="radio" name="q31" value="c"> C) Journalism that focuses on environmental issues<br>
+                <input type="radio" name="q31" value="d"> D) Journalism that investigates corruption<br>
+            </li>
+            <li>
+                <p>What was the Scopes Monkey Trial?</p>
+                <input type="radio" name="q32" value="a"> A) A trial about labor rights<br>
+                <input type="radio" name="q32" value="b"> B) A trial about women's suffrage<br>
+                <input type="radio" name="q32" value="c"> C) A trial about teaching Darwin's theory of evolution versus Bible creationism<br>
+                <input type="radio" name="q32" value="d"> D) A trial about racial segregation<br>
+            </li>
+            <li>
+                <p>What was the Triangle Shirtwaist Factory?</p>
+                <input type="radio" name="q33" value="a"> A) A factory where workers were trapped inside during a fire due to locked doors<br>
+                <input type="radio" name="q33" value="b"> B) A factory that produced military uniforms<br>
+                <input type="radio" name="q33" value="c"> C) A factory known for high wages<br>
+                <input type="radio" name="q33" value="d"> D) A factory that pioneered safety measures<br>
+            </li>
+            <li>
+                <p>What were the MAIN causes of World War I?</p>
+                <input type="radio" name="q34" value="a"> A) Economic depression, Imperialism, Nationalism, Alliances<br>
+                <input type="radio" name="q34" value="b"> B) Militarism, Alliances, Economic depression, Nationalism<br>
+                <input type="radio" name="q34" value="c"> C) Militarism, Imperialism, Economic depression, Nationalism<br>
+                <input type="radio" name="q34" value="d"> D) Militarism, Alliances, Imperialism, Nationalism<br>
+            </li>
+            <li>
+                <p>What were speakeasies?</p>
+                <input type="radio" name="q35" value="a"> A) Places where alcohol was sold legally<br>
+                <input type="radio" name="q35" value="b"> B) Places where alcoholic beverages were consumed and sold illegally<br>
+                <input type="radio" name="q35" value="c"> C) Places where speeches were made<br>
+                <input type="radio" name="q35" value="d"> D) Places where political meetings were held<br>
+            </li>
+            <li>
+                <p>What was the Zimmerman Note?</p>
+                <input type="radio" name="q36" value="a"> A) A note from Germany to Mexico instructing an ambassador to convince Mexico to go to war with the U.S.<br>
+                <input type="radio" name="q36" value="b"> B) A note from Germany to Britain proposing an alliance<br>
+                <input type="radio" name="q36" value="c"> C) A note from Mexico to the U.S. declaring war<br>
+                <input type="radio" name="q36" value="d"> D) A note from Britain to Germany proposing peace<br>
+            </li>
+            <li>
+                <p>What was known as the powder keg of Europe?</p>
+                <input type="radio" name="q37" value="a"> A) Balkan Peninsula<br>
+                <input type="radio" name="q37" value="b"> B) Iberian Peninsula<br>
+                <input type="radio" name="q37" value="c"> C) Scandinavian Peninsula<br>
+                <input type="radio" name="q37" value="d"> D) Italian Peninsula<br>
+            </li>
+            <li>
+                <p>What was the Harlem Renaissance?</p>
+                <input type="radio" name="q38" value="a"> A) A period when African-American achievements in art, music, and literature flourished<br>
+                <input type="radio" name="q38" value="b"> B) A period of economic growth in Harlem<br>
+                <input type="radio" name="q38" value="c"> C) A period of political upheaval in Harlem<br>
+                <input type="radio" name="q38" value="d"> D) A period of scientific advancements in Harlem<br>
+            </li>
+            <li>
+                <p>What was trench warfare?</p>
+                <input type="radio" name="q39" value="a"> A) A form of warfare involving aerial combat<br>
+                <input type="radio" name="q39" value="b"> B) A form of warfare involving naval battles<br>
+                <input type="radio" name="q39" value="c"> C) A form of warfare in which opposing armies fight each other from trenches dug in the battlefield<br>
+                <input type="radio" name="q39" value="d"> D) A form of warfare involving guerrilla tactics<br>
+            </li>
+            <li>
+                <p>What amendment gave women the right to vote?</p>
+                <input type="radio" name="q40" value="a"> A) 13th Amendment<br>
+                <input type="radio" name="q40" value="b"> B) 19th Amendment<br>
+                <input type="radio" name="q40" value="c"> C) 14th Amendment<br>
+                <input type="radio" name="q40" value="d"> D) 15th Amendment<br>
+            </li>
+            <li>
+                <p>What was the Lusitania?</p>
+                <input type="radio" name="q41" value="a"> A) A British passenger ship sunk by a German U-Boat<br>
+                <input type="radio" name="q41" value="b"> B) An American warship<br>
+                <input type="radio" name="q41" value="c"> C) A French cargo ship<br>
+                <input type="radio" name="q41" value="d"> D) A German submarine<br>
+            </li>
+            <li>
+                <p>What was the immediate cause of World War I?</p>
+                <input type="radio" name="q42" value="a"> A) Assassination of Archduke Franz Ferdinand<br>
+                <input type="radio" name="q42" value="b"> B) Economic depression<br>
+                <input type="radio" name="q42" value="c"> C) Imperialism<br>
+                <input type="radio" name="q42" value="d"> D) Nationalism<br>
+            </li>
+            <li>
+                <p>What were the weapons and technology used in World War I?</p>
+                <input type="radio" name="q43" value="a"> A) Swords, spears, and shields<br>
+                <input type="radio" name="q43" value="b"> B) Crossbows and catapults<br>
+                <input type="radio" name="q43" value="c"> C) Machine gun, artillery field guns, poison gas, submarines, tanks, armored cars, and airplanes<br>
+                <input type="radio" name="q43" value="d"> D) Nuclear weapons<br>
+            </li>
+            <li>
+                <p>What was the National War Labor Board?</p>
+                <input type="radio" name="q44" value="a"> A) A board that negotiated labor disputes and gave workers what they wanted to prevent strikes that would disrupt the war<br>
+                <input type="radio" name="q44" value="b"> B) A board that regulated trade<br>
+                <input type="radio" name="q44" value="c"> C) A board that oversaw agricultural production<br>
+                <input type="radio" name="q44" value="d"> D) A board that managed military supplies<br>
+            </li>
+            <li>
+                <p>What event marked the beginning of the Great Depression?</p>
+                <input type="radio" name="q45" value="a"> A) Stock Market Crash of 1929<br>
+                <input type="radio" name="q45" value="b"> B) World War I<br>
+                <input type="radio" name="q45" value="c"> C) Dust Bowl<br>
+                <input type="radio" name="q45" value="d"> D) Prohibition<br>
+            </li>
+            <li>
+                <p>What were the government programs passed by Congress to help the U.S. get out of the Great Depression called?</p>
+                <input type="radio" name="q46" value="a"> A) Square Deal<br>
+                <input type="radio" name="q46" value="b"> B) Fair Deal<br>
+                <input type="radio" name="q46" value="c"> C) New Deal<br>
+                <input type="radio" name="q46" value="d"> D) Great Society<br>
+            </li>
+            <li>
+                <p>What did the Social Security Act guarantee?</p>
+                <input type="radio" name="q47" value="a"> A) Guaranteed retirement payments for enrolled workers beginning at age 65<br>
+                <input type="radio" name="q47" value="b"> B) Free healthcare for all<br>
+                <input type="radio" name="q47" value="c"> C) Free education<br>
+                <input type="radio" name="q47" value="d"> D) Guaranteed employment<br>
+            </li>
+            <li>
+                <p>Who were the Allied powers during World War II?</p>
+                <input type="radio" name="q48" value="a"> A) Great Britain, Soviet Union, United States, France<br>
+                <input type="radio" name="q48" value="b"> B) Germany, Italy, Japan<br>
+                <input type="radio" name="q48" value="c"> C) Great Britain, Italy, United States, Japan<br>
+                <input type="radio" name="q48" value="d"> D) Germany, Soviet Union, United States, France<br>
+            </li>
+            <li>
+                <p>Who were the Axis powers during World War II?</p>
+                <input type="radio" name="q49" value="a"> A) Great Britain, Soviet Union, United States, France<br>
+                <input type="radio" name="q49" value="b"> B) Germany, Italy, Japan<br>
+                <input type="radio" name="q49" value="c"> C) Germany, Soviet Union, United States, France<br>
+                <input type="radio" name="q49" value="d"> D) Great Britain, Italy, United States, Japan<br>
+            </li>
+            <li>
+                <p>What was Kristallnacht?</p>
+                <input type="radio" name="q50" value="a"> A) A night of peace negotiations<br>
+                <input type="radio" name="q50" value="b"> B) A night of economic reform<br>
+                <input type="radio" name="q50" value="c"> C) A night when mobs throughout Germany destroyed Jewish property and terrorized Jews<br>
+                <input type="radio" name="q50" value="d"> D) A night of scientific advancements<br>
+            </li>
+            <li>
+                <p>Who was Adolf Hitler?</p>
+                <input type="radio" name="q51" value="a"> A) Austrian born Dictator of Germany, implemented Fascism and caused WWII and Holocaust<br>
+                <input type="radio" name="q51" value="b"> B) Italian born Dictator of Germany, implemented Communism and caused WWII<br>
+                <input type="radio" name="q51" value="c"> C) German born Dictator of Germany, implemented Fascism and caused WWII<br>
+                <input type="radio" name="q51" value="d"> D) Austrian born Dictator of Italy, implemented Fascism and caused WWII<br>
+            </li>
+            <li>
+                <p>What was the turning point of the war in the Pacific?</p>
+                <input type="radio" name="q52" value="a"> A) Battle of Midway<br>
+                <input type="radio" name="q52" value="b"> B) Battle of the Coral Sea<br>
+                <input type="radio" name="q52" value="c"> C) Battle of Guadalcanal<br>
+                <input type="radio" name="q52" value="d"> D) Battle of Leyte Gulf<br>
+            </li>
+            <li>
+                <p>What was D-Day?</p>
+                <input type="radio" name="q53" value="a"> A) Allied invasion of Italy<br>
+                <input type="radio" name="q53" value="b"> B) Allied invasion of France on June 6, 1944<br>
+                <input type="radio" name="q53" value="c"> C) Allied invasion of Germany<br>
+                <input type="radio" name="q53" value="d"> D) Allied invasion of Japan<br>
+            </li>
+            <li>
+                <p>What was Blitzkrieg?</p>
+                <input type="radio" name="q54" value="a"> A) "Slow war", a type of trench warfare used by German forces<br>
+                <input type="radio" name="q54" value="b"> B) "Stealth war", a type of guerrilla warfare used by German forces<br>
+                <input type="radio" name="q54" value="c"> C) "Naval war", a type of naval warfare used by German forces<br>
+                <input type="radio" name="q54" value="d"> D) "Lighting war", a type of fast-moving warfare used by German forces against Poland in 1939<br>
+            </li>
+            <li>
+                <p>What was Hitler's Final Solution?</p>
+                <input type="radio" name="q55" value="a"> A) A plan to negotiate peace<br>
+                <input type="radio" name="q55" value="b"> B) A mass murder of all Jews, setting up extermination camps and forcing millions of Jews to enter gas chambers, ovens, and fire pits<br>
+                <input type="radio" name="q55" value="c"> C) A plan to relocate Jews<br>
+                <input type="radio" name="q55" value="d"> D) A plan to integrate Jews into society<br>
+            </li>
+            <li>
+                <p>Who were the Nazi officers in charge of propaganda and the SS?</p>
+                <input type="radio" name="q56" value="a"> A) Joseph Goebbels and Heinrich Himmler<br>
+                <input type="radio" name="q56" value="b"> B) Joseph Goebbels and Hermann Göring<br>
+                <input type="radio" name="q56" value="c"> C) Heinrich Himmler and Hermann Göring<br>
+                <input type="radio" name="q56" value="d"> D) Joseph Goebbels and Reinhard Heydrich<br>
+            </li>
+            <li>
+                <p>What was the atomic bomb?</p>
+                <input type="radio" name="q57" value="a"> A) A bomb dropped by an American bomber on Hiroshima and Nagasaki destroying both cities<br>
+                <input type="radio" name="q57" value="b"> B) A bomb used by the Germans in World War I<br>
+                <input type="radio" name="q57" value="c"> C) A bomb used by the Italians in World War II<br>
+                <input type="radio" name="q57" value="d"> D) A bomb used by the Japanese in World War II<br>
+            </li>
+            <li>
+                <p>What event brought the United States into World War II?</p>
+                <input type="radio" name="q58" value="a"> A) Attack on Pearl Harbor<br>
+                <input type="radio" name="q58" value="b"> B) Sinking of the Lusitania<br>
+                <input type="radio" name="q58" value="c"> C) German invasion of Poland<br>
+                <input type="radio" name="q58" value="d"> D) Battle of Britain<br>
+            </li>
+            <li>
+                <p>What was the Marshall Plan?</p>
+                <input type="radio" name="q59" value="a"> A) A plan to defeat Japan in World War II<br>
+                <input type="radio" name="q59" value="b"> B) A plan for the U.S. to provide economic aid to European countries to help them rebuild after World War II<br>
+                <input type="radio" name="q59" value="c"> C) A plan to defeat Germany in World War II<br>
+                <input type="radio" name="q59" value="d"> D) A plan to establish the United Nations<br>
+            </li>
+            <li>
+                <p>What was the purpose of the United Nations?</p>
+                <input type="radio" name="q60" value="a"> A) To promote international peace and security<br>
+                <input type="radio" name="q60" value="b"> B) To create a world government<br>
+                <input type="radio" name="q60" value="c"> C) To promote international trade<br>
+                <input type="radio" name="q60" value="d"> D) To promote nuclear disarmament<br>
+            </li>
+        </ol>
+        <input type="button" value="Submit" onclick="gradeTest()">
+    </form>
+    <p id="score"></p>
+</body>
+</html>
+
+
+
+
